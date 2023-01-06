@@ -1,4 +1,4 @@
-package jpashop.jpapractice.domain;
+package jpashop.jpapractice.domain.Item;
 
 import lombok.Getter;
 import lombok.Setter;
