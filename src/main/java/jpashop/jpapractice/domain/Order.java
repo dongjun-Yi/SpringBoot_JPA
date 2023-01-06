@@ -30,6 +30,6 @@ public class Order {
     private Delivery delivery;
 
     private LocalDateTime orderDate;
-
+    @Enumerated(EnumType.STRING)
     private OrderStatus status;
 }
