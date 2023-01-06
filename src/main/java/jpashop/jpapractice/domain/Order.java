@@ -1,6 +1,7 @@
 package jpashop.jpapractice.domain;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.sql.Array;
@@ -11,6 +12,7 @@ import java.util.List;
 @Entity
 @Table(name="orders")
 @Getter
+@Setter
 public class Order {
 
     @Id
@@ -22,6 +24,7 @@ public class Order {
     @JoinColumn(name="member_id")
     private Member member;
 
+    @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 
     private Delivery delivery;
