@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="dtype")
+@DiscriminatorColumn(name = "dtype")
 @Getter
 @Setter
 public abstract class Item {
@@ -26,4 +26,17 @@ public abstract class Item {
 
     @ManyToMany(mappedBy = "items")
     private List<Category> categories = new ArrayList<>();
+
+    //==비즈니스 로직==// 엔티티 안에 비즈니스로직을 넣어야 객체지향적
+    public void addStock(int stockQuantity) {
+        this.stockQuantity += stockQuantity;
+    }
+
+    public void removeStock(int quantity) {
+        int retStock = this.stockQuantity - quantity;
+        if (retStock < 0)
+            throw new NotEnoughStockException("need more stock");
+
+        this.stockQuantity = retStock;
+    }
 }
