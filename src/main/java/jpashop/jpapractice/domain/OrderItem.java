@@ -12,16 +12,25 @@ import javax.persistence.*;
 public class OrderItem {
     @Id
     @GeneratedValue
-    @Column(name="oder_item_id")
+    @Column(name = "oder_item_id")
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="item_id")
+    @JoinColumn(name = "item_id")
     private Item item;
     @ManyToOne
-    @JoinColumn(name="order_id")
+    @JoinColumn(name = "order_id")
     private Order order;
 
     private int orderPrice; //주문 가격
     private int count; //주문 수량
+
+    //비즈니스 로직//
+    public void cancel() {
+        getItem().addStock(count);
+    }
+
+    public int getTotalPrice() {
+        return getOrderPrice() * getCount();
+    }
 }
