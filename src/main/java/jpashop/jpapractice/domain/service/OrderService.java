@@ -17,8 +17,9 @@ public class OrderService {
     //private final MemberRepository memberRepository;
     private final MemberDataJpaRepository memberDataJpaRepository;
     //private final OrderRepository orderRepository;
-    private final ItemRepository itemRepository;
+    //private final ItemRepository itemRepository;
 
+    private final ItemDataJpaRepository itemDataJpaRepository;
     private final OrderDataJpaRepository orderDataJpaRepository;
 
     /**
@@ -29,7 +30,9 @@ public class OrderService {
         //엔티티 조회
         //Member member = memberRepository.findOne(memberId);
         Member member = memberDataJpaRepository.findOneById(memberId);
-        Item item = itemRepository.findOne(itemId);
+        //Item item = itemRepository.findOne(itemId);
+        Item item = itemDataJpaRepository.findOneById(itemId);
+
 
         //배송정보 생성
         Delivery delivery = new Delivery();
