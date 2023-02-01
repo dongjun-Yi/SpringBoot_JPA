@@ -16,4 +16,8 @@ public class BasicResponse<T> {
         this.count = count;
         this.data = data;
     }
+
+    public BasicResponse(String message) {
+        this.message = message;
+    }
 }

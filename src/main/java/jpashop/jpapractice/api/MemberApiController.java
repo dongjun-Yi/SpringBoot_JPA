@@ -1,4 +1,4 @@
-package jpashop.jpapractice.controller;
+package jpashop.jpapractice.api;
 
 import jpashop.jpapractice.domain.Address;
 import jpashop.jpapractice.domain.Member;
@@ -31,7 +31,7 @@ public class MemberApiController {
     }
 
     @PostMapping("/api/members/add")
-    public ResponseEntity<BasicResponse> addMember(@RequestBody HashMap<String, String> param) {
+    public ResponseEntity<MemberResultDto> addMember(@RequestBody HashMap<String, String> param) {
         Member member = new Member();
         member.setName(param.get("name"));
         return memberService.addMember(member);

@@ -6,6 +6,7 @@ import jpashop.jpapractice.dto.MemberResultDto;
 import jpashop.jpapractice.repository.MemberDataJpaRepository;
 import jpashop.jpapractice.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -65,10 +66,10 @@ public class MemberService {
     }
 
     @Transactional
-    public ResponseEntity<BasicResponse> addMember(Member member) {
+    public ResponseEntity<MemberResultDto> addMember(Member member) {
         validateDuplicateMember(member);
         memberDataJpaRepository.save(member);
-        BasicResponse response = new BasicResponse("저장됨", null, member);
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        MemberResultDto dtoMember = new MemberResultDto(member.getName(), member.getId());
+        return new ResponseEntity<>(dtoMember, HttpStatus.OK);
     }
 }
