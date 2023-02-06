@@ -4,12 +4,12 @@ import jpashop.jpapractice.domain.Member;
 import jpashop.jpapractice.domain.service.MemberService;
 import jpashop.jpapractice.dto.member.create.CreateMemberRequest;
 import jpashop.jpapractice.dto.member.create.CreateMemberResponse;
+import jpashop.jpapractice.dto.member.update.UpdateMemberRequest;
+import jpashop.jpapractice.dto.member.update.UpdateMemberResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -28,5 +28,13 @@ public class MemberApiController {
         member.setName(request.getName());
         Long id = memberService.join(member);
         return new ResponseEntity<>(new CreateMemberResponse(id), HttpStatus.OK);
+    }
+
+    @PutMapping("/api/members/{id}")
+    public ResponseEntity<UpdateMemberResponse> updateMember(@RequestBody @Valid UpdateMemberRequest request,
+                                                             @PathVariable("id") Long id) {
+        memberService.update(id, request.getName());
+        Member findMember = memberService.findOne(id);
+        return new ResponseEntity<>(new UpdateMemberResponse(findMember.getId(), findMember.getName()), HttpStatus.OK);
     }
 }
