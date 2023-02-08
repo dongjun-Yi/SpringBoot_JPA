@@ -65,4 +65,20 @@ public class OrderService {
     public List<Order> findOrders(OrderSearch orderSearch) {
         return orderDataJpaRepository.findAllByString(orderSearch);
     }
+
+    public List<Order> findOrdersWithMemberDelivery() {
+        return orderDataJpaRepository.findWithMemberDelivery();
+    }
+
+    public List<Order> findOrdersWithMemberDelivery(int offset, int limit) {
+        return orderDataJpaRepository.findWithMemberDelivery(offset, limit);
+    }
+
+    public List<Order> findAllOrders() {
+        return orderDataJpaRepository.findAll();
+    }
+
+    public List<Order> findALlWithItem() {
+        return orderDataJpaRepository.findAllWithItem();
+    }
 }

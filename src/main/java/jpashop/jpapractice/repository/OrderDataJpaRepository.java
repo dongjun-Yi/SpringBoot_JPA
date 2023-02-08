@@ -11,4 +11,5 @@ public interface OrderDataJpaRepository extends JpaRepository<Order, Long>, Orde
 
     Order findOneById(Long id);
 
+    List<Order> findAll();
 }
