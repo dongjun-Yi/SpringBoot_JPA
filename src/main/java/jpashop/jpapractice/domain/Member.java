@@ -11,10 +11,10 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-public class Member {
+public class Member extends BaseEntity {
     @Id
     @GeneratedValue
-    @Column(name= "member_id")
+    @Column(name = "member_id")
     private Long id;
 
     private String name;
@@ -23,4 +23,6 @@ public class Member {
     @OneToMany(mappedBy = "member")
     @JsonIgnore
     private List<Order> orders = new ArrayList<>();
+
+
 }
