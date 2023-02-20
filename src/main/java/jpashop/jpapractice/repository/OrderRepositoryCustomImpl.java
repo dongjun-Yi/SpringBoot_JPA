@@ -1,17 +1,33 @@
 package jpashop.jpapractice.repository;
 
+import com.querydsl.core.types.dsl.BooleanExpression;
+import com.querydsl.jpa.impl.JPAQueryFactory;
 import jpashop.jpapractice.OrderSearch;
-import jpashop.jpapractice.domain.Order;
+import jpashop.jpapractice.domain.*;
+import jpashop.jpapractice.domain.Item.QItem;
 import lombok.RequiredArgsConstructor;
-import org.springframework.util.StringUtils;
+import org.springframework.data.domain.Pageable;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-@RequiredArgsConstructor
+import static jpashop.jpapractice.domain.Item.QItem.*;
+import static jpashop.jpapractice.domain.QDelivery.*;
+import static jpashop.jpapractice.domain.QMember.*;
+import static jpashop.jpapractice.domain.QOrder.*;
+import static jpashop.jpapractice.domain.QOrderItem.*;
+import static org.springframework.util.StringUtils.*;
+
 public class OrderRepositoryCustomImpl implements OrderRepositoryCustom {
-    private final EntityManager em;
+    private EntityManager em;
+
+    private JPAQueryFactory queryFactory;
+
+    public OrderRepositoryCustomImpl(EntityManager em) {
+        this.em = em;
+        this.queryFactory = new JPAQueryFactory(em);
+    }
 
     @Override
     public List<Order> findAllByString(OrderSearch orderSearch) {
@@ -30,7 +46,7 @@ public class OrderRepositoryCustomImpl implements OrderRepositoryCustom {
         }
 
         //회원 이름 검색
-        if (StringUtils.hasText(orderSearch.getMemberName())) {
+        if (hasText(orderSearch.getMemberName())) {
             if (isFirstCondition) {
                 jpql += " where";
                 isFirstCondition = false;
@@ -43,11 +59,28 @@ public class OrderRepositoryCustomImpl implements OrderRepositoryCustom {
         if (orderSearch.getOrderStatus() != null) {
             query = query.setParameter("status", orderSearch.getOrderStatus());
         }
-        if (StringUtils.hasText(orderSearch.getMemberName())) {
+        if (hasText(orderSearch.getMemberName())) {
             query = query.setParameter("name", orderSearch.getMemberName());
         }
         return query.getResultList();
     }
+
+    @Override
+    public List<Order> findAllByString_querydsl(OrderSearch orderSearch) {
+        return queryFactory.selectFrom(order)
+                .join(order.member, member)
+                .where(orderStatus(orderSearch.getOrderStatus()), usernameEq(orderSearch.getMemberName()))
+                .fetch();
+    }
+
+    private BooleanExpression orderStatus(OrderStatus orderStatus) {
+        return orderStatus != null ? order.status.eq(orderStatus) : null;
+    }
+
+    private BooleanExpression usernameEq(String name) {
+        return hasText(name) ? member.name.like(name) : null;
+    }
+
 
     @Override
     public List<Order> findWithMemberDelivery() {
@@ -55,6 +88,14 @@ public class OrderRepositoryCustomImpl implements OrderRepositoryCustom {
                 + " join fetch o.member m"
                 + " join fetch o.delivery d", Order.class
         ).getResultList();
+    }
+
+    @Override
+    public List<Order> findWithMemberDelivery_querydsl() {
+        return queryFactory.selectFrom(order)
+                .join(order.member, member).fetchJoin()
+                .join(order.delivery, delivery).fetchJoin()
+                .fetch();
     }
 
     @Override
@@ -68,6 +109,16 @@ public class OrderRepositoryCustomImpl implements OrderRepositoryCustom {
     }
 
     @Override
+    public List<Order> findWithMemberDelivery_querydsl_withPage(Pageable pageable) {
+        return queryFactory.selectFrom(order)
+                .join(order.member, member).fetchJoin()
+                .join(order.delivery, delivery).fetchJoin()
+                .offset(pageable.getOffset())
+                .limit(pageable.getPageSize())
+                .fetch();
+    }
+
+    @Override
     public List<Order> findAllWithItem() {
 
         return em.createQuery("select distinct o from Order o"
@@ -76,5 +127,15 @@ public class OrderRepositoryCustomImpl implements OrderRepositoryCustom {
                 + " join fetch o.orderItems oi"
                 + " join fetch oi.item i ", Order.class
         ).getResultList();
+    }
+
+    @Override
+    public List<Order> findAllWithItem_querydsl() {
+        return queryFactory.selectFrom(order).distinct()
+                .join(order.member, member).fetchJoin()
+                .join(order.delivery, delivery).fetchJoin()
+                .join(order.orderItems, orderItem).fetchJoin()
+                .join(orderItem.item, item).fetchJoin()
+                .fetch();
     }
 }

@@ -5,6 +5,7 @@ import jpashop.jpapractice.domain.*;
 import jpashop.jpapractice.domain.Item.Item;
 import jpashop.jpapractice.repository.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -67,11 +68,11 @@ public class OrderService {
     }
 
     public List<Order> findOrdersWithMemberDelivery() {
-        return orderDataJpaRepository.findWithMemberDelivery();
+        return orderDataJpaRepository.findWithMemberDelivery_querydsl();
     }
 
-    public List<Order> findOrdersWithMemberDelivery(int offset, int limit) {
-        return orderDataJpaRepository.findWithMemberDelivery(offset, limit);
+    public List<Order> findOrdersWithMemberDelivery(Pageable pageable) {
+        return orderDataJpaRepository.findWithMemberDelivery_querydsl_withPage(pageable);
     }
 
     public List<Order> findAllOrders() {
@@ -79,6 +80,6 @@ public class OrderService {
     }
 
     public List<Order> findALlWithItem() {
-        return orderDataJpaRepository.findAllWithItem();
+        return orderDataJpaRepository.findAllWithItem_querydsl();
     }
 }
