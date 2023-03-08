@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="jpashop.jpapractice.JpapracticeApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-08T16:09:42" hostname="dongjunui-MacBookPro.local" time="0.068">
+  <properties/>
+  <testcase name="contextLoads()" classname="jpashop.jpapractice.JpapracticeApplicationTests" time="0.068"/>
+  <system-out><![CDATA[01:09:40.400 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+01:09:40.406 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+01:09:40.421 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [jpashop.jpapractice.JpapracticeApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+01:09:40.427 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [jpashop.jpapractice.JpapracticeApplicationTests], using SpringBootContextLoader
+01:09:40.428 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [jpashop.jpapractice.JpapracticeApplicationTests]: class path resource [jpashop/jpapractice/JpapracticeApplicationTests-context.xml] does not exist
+01:09:40.429 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [jpashop.jpapractice.JpapracticeApplicationTests]: class path resource [jpashop/jpapractice/JpapracticeApplicationTestsContext.groovy] does not exist
+01:09:40.429 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [jpashop.jpapractice.JpapracticeApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+01:09:40.429 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [jpashop.jpapractice.JpapracticeApplicationTests]: JpapracticeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:09:40.447 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [jpashop.jpapractice.JpapracticeApplicationTests]
+01:09:40.477 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/dongjun/Desktop/스프링/스프링-실전JPA/jpapractice/build/classes/java/main/jpashop/jpapractice/JpapracticeApplication.class]
+01:09:40.479 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration jpashop.jpapractice.JpapracticeApplication for test class jpashop.jpapractice.JpapracticeApplicationTests
+01:09:40.520 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [jpashop.jpapractice.JpapracticeApplicationTests]: using defaults.
+01:09:40.521 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+01:09:40.528 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2dbf4cbd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@20b5f2ac, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7fc44dec, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e3060d8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@293d0107, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2692b61e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7b64240d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@62fad19, org.springframework.test.context.event.EventPublishingTestExecutionListener@47dbb1e2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@74cadd41, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2e54db99, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@55e8ec2f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4f2613d1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6d24ffa1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@65a4798f]
+01:09:40.530 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3f1c5af9 testClass = JpapracticeApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1c55f277 testClass = JpapracticeApplicationTests, locations = '{}', classes = '{class jpashop.jpapractice.JpapracticeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@5f9be66c, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@54e7df6a, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@64bce832, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7ae42ce3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@ab7395e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@11c9af63], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.7)
+
+2023-03-09 01:09:40.683  INFO 1904 --- [    Test worker] j.j.JpapracticeApplicationTests          : Starting JpapracticeApplicationTests using Java 17.0.6 on dongjunui-MacBookPro.local with PID 1904 (started by dongjun in /Users/dongjun/Desktop/스프링/스프링-실전JPA/jpapractice)
+2023-03-09 01:09:40.683  INFO 1904 --- [    Test worker] j.j.JpapracticeApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2023-03-09 01:09:41.061  INFO 1904 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-09 01:09:41.090  INFO 1904 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-03-09 01:09:41.419  INFO 1904 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-09 01:09:41.445  INFO 1904 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-03-09 01:09:41.514  INFO 1904 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-09 01:09:41.557  INFO 1904 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-09 01:09:41.606  INFO 1904 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-09 01:09:41.621  INFO 1904 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-03-09 01:09:41.962 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : drop table if exists category CASCADE 
+2023-03-09 01:09:41.965  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781965 | took 1ms | statement | connection 1| url jdbc:h2:tcp://localhost/~/jpapractice
+drop table if exists category CASCADE 
+drop table if exists category CASCADE ;
+2023-03-09 01:09:41.965 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : drop table if exists category_item CASCADE 
+2023-03-09 01:09:41.966  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781966 | took 0ms | statement | connection 1| url jdbc:h2:tcp://localhost/~/jpapractice
+drop table if exists category_item CASCADE 
+drop table if exists category_item CASCADE ;
+2023-03-09 01:09:41.966 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : drop table if exists delivery CASCADE 
+2023-03-09 01:09:41.967  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781967 | took 0ms | statement | connection 1| url jdbc:h2:tcp://localhost/~/jpapractice
+drop table if exists delivery CASCADE 
+drop table if exists delivery CASCADE ;
+2023-03-09 01:09:41.967 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : drop table if exists item CASCADE 
+2023-03-09 01:09:41.967  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781967 | took 0ms | statement | connection 1| url jdbc:h2:tcp://localhost/~/jpapractice
+drop table if exists item CASCADE 
+drop table if exists item CASCADE ;
+2023-03-09 01:09:41.967 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : drop table if exists member CASCADE 
+2023-03-09 01:09:41.968  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781968 | took 0ms | statement | connection 1| url jdbc:h2:tcp://localhost/~/jpapractice
+drop table if exists member CASCADE 
+drop table if exists member CASCADE ;
+2023-03-09 01:09:41.968 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : drop table if exists order_item CASCADE 
+2023-03-09 01:09:41.969  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781969 | took 0ms | statement | connection 1| url jdbc:h2:tcp://localhost/~/jpapractice
+drop table if exists order_item CASCADE 
+drop table if exists order_item CASCADE ;
+2023-03-09 01:09:41.969 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : drop table if exists orders CASCADE 
+2023-03-09 01:09:41.969  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781969 | took 0ms | statement | connection 1| url jdbc:h2:tcp://localhost/~/jpapractice
+drop table if exists orders CASCADE 
+drop table if exists orders CASCADE ;
+2023-03-09 01:09:41.969 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : drop sequence if exists hibernate_sequence
+2023-03-09 01:09:41.970  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781970 | took 0ms | statement | connection 1| url jdbc:h2:tcp://localhost/~/jpapractice
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+2023-03-09 01:09:41.971 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2023-03-09 01:09:41.971  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781971 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+create sequence hibernate_sequence start with 1 increment by 1
+create sequence hibernate_sequence start with 1 increment by 1;
+2023-03-09 01:09:41.972 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : create table category (category_id bigint not null, name varchar(255), parent_id bigint, primary key (category_id))
+2023-03-09 01:09:41.972  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781972 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+create table category (category_id bigint not null, name varchar(255), parent_id bigint, primary key (category_id))
+create table category (category_id bigint not null, name varchar(255), parent_id bigint, primary key (category_id));
+2023-03-09 01:09:41.972 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : create table category_item (category_id bigint not null, item_id bigint not null)
+2023-03-09 01:09:41.973  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781973 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+create table category_item (category_id bigint not null, item_id bigint not null)
+create table category_item (category_id bigint not null, item_id bigint not null);
+2023-03-09 01:09:41.973 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : create table delivery (delivery_id bigint not null, city varchar(255), street varchar(255), zipcode varchar(255), delivery_status varchar(255), primary key (delivery_id))
+2023-03-09 01:09:41.973  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781973 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+create table delivery (delivery_id bigint not null, city varchar(255), street varchar(255), zipcode varchar(255), delivery_status varchar(255), primary key (delivery_id))
+create table delivery (delivery_id bigint not null, city varchar(255), street varchar(255), zipcode varchar(255), delivery_status varchar(255), primary key (delivery_id));
+2023-03-09 01:09:41.974 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : create table item (dtype varchar(31) not null, item_id bigint not null, name varchar(255), price integer not null, stock_quantity integer not null, artist varchar(255), etc varchar(255), author varchar(255), isbn varchar(255), actor varchar(255), director varchar(255), primary key (item_id))
+2023-03-09 01:09:41.974  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781974 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+create table item (dtype varchar(31) not null, item_id bigint not null, name varchar(255), price integer not null, stock_quantity integer not null, artist varchar(255), etc varchar(255), author varchar(255), isbn varchar(255), actor varchar(255), director varchar(255), primary key (item_id))
+create table item (dtype varchar(31) not null, item_id bigint not null, name varchar(255), price integer not null, stock_quantity integer not null, artist varchar(255), etc varchar(255), author varchar(255), isbn varchar(255), actor varchar(255), director varchar(255), primary key (item_id));
+2023-03-09 01:09:41.975 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : create table member (member_id bigint not null, created_date timestamp, updated_date timestamp, created_by varchar(255), last_modified_by varchar(255), city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255), primary key (member_id))
+2023-03-09 01:09:41.975  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781975 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+create table member (member_id bigint not null, created_date timestamp, updated_date timestamp, created_by varchar(255), last_modified_by varchar(255), city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255), primary key (member_id))
+create table member (member_id bigint not null, created_date timestamp, updated_date timestamp, created_by varchar(255), last_modified_by varchar(255), city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255), primary key (member_id));
+2023-03-09 01:09:41.975 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : create table order_item (oder_item_id bigint not null, count integer not null, order_price integer not null, item_id bigint, order_id bigint, primary key (oder_item_id))
+2023-03-09 01:09:41.976  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781976 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+create table order_item (oder_item_id bigint not null, count integer not null, order_price integer not null, item_id bigint, order_id bigint, primary key (oder_item_id))
+create table order_item (oder_item_id bigint not null, count integer not null, order_price integer not null, item_id bigint, order_id bigint, primary key (oder_item_id));
+2023-03-09 01:09:41.976 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : create table orders (order_id bigint not null, order_date timestamp, status varchar(255), delivery_id bigint, member_id bigint, primary key (order_id))
+2023-03-09 01:09:41.976  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781976 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+create table orders (order_id bigint not null, order_date timestamp, status varchar(255), delivery_id bigint, member_id bigint, primary key (order_id))
+create table orders (order_id bigint not null, order_date timestamp, status varchar(255), delivery_id bigint, member_id bigint, primary key (order_id));
+2023-03-09 01:09:41.977 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : alter table category add constraint FK2y94svpmqttx80mshyny85wqr foreign key (parent_id) references category
+2023-03-09 01:09:41.978  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781978 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+alter table category add constraint FK2y94svpmqttx80mshyny85wqr foreign key (parent_id) references category
+alter table category add constraint FK2y94svpmqttx80mshyny85wqr foreign key (parent_id) references category;
+2023-03-09 01:09:41.978 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : alter table category_item add constraint FKu8b4lwqutcdq3363gf6mlujq foreign key (item_id) references item
+2023-03-09 01:09:41.979  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781979 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+alter table category_item add constraint FKu8b4lwqutcdq3363gf6mlujq foreign key (item_id) references item
+alter table category_item add constraint FKu8b4lwqutcdq3363gf6mlujq foreign key (item_id) references item;
+2023-03-09 01:09:41.979 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : alter table category_item add constraint FKcq2n0opf5shyh84ex1fhukcbh foreign key (category_id) references category
+2023-03-09 01:09:41.980  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781980 | took 1ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+alter table category_item add constraint FKcq2n0opf5shyh84ex1fhukcbh foreign key (category_id) references category
+alter table category_item add constraint FKcq2n0opf5shyh84ex1fhukcbh foreign key (category_id) references category;
+2023-03-09 01:09:41.980 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : alter table order_item add constraint FKija6hjjiit8dprnmvtvgdp6ru foreign key (item_id) references item
+2023-03-09 01:09:41.981  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781981 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+alter table order_item add constraint FKija6hjjiit8dprnmvtvgdp6ru foreign key (item_id) references item
+alter table order_item add constraint FKija6hjjiit8dprnmvtvgdp6ru foreign key (item_id) references item;
+2023-03-09 01:09:41.981 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : alter table order_item add constraint FKt4dc2r9nbvbujrljv3e23iibt foreign key (order_id) references orders
+2023-03-09 01:09:41.982  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781982 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+alter table order_item add constraint FKt4dc2r9nbvbujrljv3e23iibt foreign key (order_id) references orders
+alter table order_item add constraint FKt4dc2r9nbvbujrljv3e23iibt foreign key (order_id) references orders;
+2023-03-09 01:09:41.982 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : alter table orders add constraint FKtkrur7wg4d8ax0pwgo0vmy20c foreign key (delivery_id) references delivery
+2023-03-09 01:09:41.983  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781983 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+alter table orders add constraint FKtkrur7wg4d8ax0pwgo0vmy20c foreign key (delivery_id) references delivery
+alter table orders add constraint FKtkrur7wg4d8ax0pwgo0vmy20c foreign key (delivery_id) references delivery;
+2023-03-09 01:09:41.983 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : alter table orders add constraint FKpktxwhj3x9m4gth5ff6bkqgeb foreign key (member_id) references member
+2023-03-09 01:09:41.984  INFO 1904 --- [    Test worker] p6spy                                    : #1678291781984 | took 0ms | statement | connection 2| url jdbc:h2:tcp://localhost/~/jpapractice
+alter table orders add constraint FKpktxwhj3x9m4gth5ff6bkqgeb foreign key (member_id) references member
+alter table orders add constraint FKpktxwhj3x9m4gth5ff6bkqgeb foreign key (member_id) references member;
+2023-03-09 01:09:41.985  INFO 1904 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-09 01:09:41.989  INFO 1904 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-09 01:09:42.111 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.117  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782117 | took 3ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.126 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.127  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782127 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.127 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.128  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782127 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.128 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.128  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782128 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.129 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.129  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782129 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.130 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.131  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782131 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.131 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.131  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782131 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.138 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into member (created_date, updated_date, created_by, last_modified_by, city, street, zipcode, name, member_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-03-09 01:09:42.140  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782140 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into member (created_date, updated_date, created_by, last_modified_by, city, street, zipcode, name, member_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+insert into member (created_date, updated_date, created_by, last_modified_by, city, street, zipcode, name, member_id) values ('2023-03-09T01:09:42.110+0900', '2023-03-09T01:09:42.110+0900', NULL, NULL, '서울', '1', '1111', 'userA', 1);
+2023-03-09 01:09:42.141 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values (?, ?, ?, ?, ?, 'Book', ?)
+2023-03-09 01:09:42.142  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782142 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values (?, ?, ?, ?, ?, 'Book', ?)
+insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values ('JPA1 BOOK', 10000, 100, NULL, NULL, 'Book', 2);
+2023-03-09 01:09:42.142 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values (?, ?, ?, ?, ?, 'Book', ?)
+2023-03-09 01:09:42.142  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782142 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values (?, ?, ?, ?, ?, 'Book', ?)
+insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values ('JPA2 BOOK', 20000, 100, NULL, NULL, 'Book', 3);
+2023-03-09 01:09:42.142 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into delivery (city, street, zipcode, delivery_status, delivery_id) values (?, ?, ?, ?, ?)
+2023-03-09 01:09:42.143  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782143 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into delivery (city, street, zipcode, delivery_status, delivery_id) values (?, ?, ?, ?, ?)
+insert into delivery (city, street, zipcode, delivery_status, delivery_id) values ('서울', '1', '1111', NULL, 5);
+2023-03-09 01:09:42.143 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into orders (delivery_id, member_id, order_date, status, order_id) values (?, ?, ?, ?, ?)
+2023-03-09 01:09:42.143  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782143 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into orders (delivery_id, member_id, order_date, status, order_id) values (?, ?, ?, ?, ?)
+insert into orders (delivery_id, member_id, order_date, status, order_id) values (5, 1, '2023-03-09T01:09:42.128+0900', 'ORDER', 4);
+2023-03-09 01:09:42.144 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (?, ?, ?, ?, ?)
+2023-03-09 01:09:42.144  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782144 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (?, ?, ?, ?, ?)
+insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (1, 2, 4, 10000, 6);
+2023-03-09 01:09:42.144 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (?, ?, ?, ?, ?)
+2023-03-09 01:09:42.145  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782145 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (?, ?, ?, ?, ?)
+insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (2, 3, 4, 20000, 7);
+2023-03-09 01:09:42.145 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : update item set name=?, price=?, stock_quantity=?, author=?, isbn=? where item_id=?
+2023-03-09 01:09:42.147  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782147 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+update item set name=?, price=?, stock_quantity=?, author=?, isbn=? where item_id=?
+update item set name='JPA1 BOOK', price=10000, stock_quantity=99, author=NULL, isbn=NULL where item_id=2;
+2023-03-09 01:09:42.147 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : update item set name=?, price=?, stock_quantity=?, author=?, isbn=? where item_id=?
+2023-03-09 01:09:42.148  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782148 | took 0ms | statement | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+update item set name=?, price=?, stock_quantity=?, author=?, isbn=? where item_id=?
+update item set name='JPA2 BOOK', price=20000, stock_quantity=98, author=NULL, isbn=NULL where item_id=3;
+2023-03-09 01:09:42.150  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782150 | took 0ms | commit | connection 3| url jdbc:h2:tcp://localhost/~/jpapractice
+
+;
+2023-03-09 01:09:42.151 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.151  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782151 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.152 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.152  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782152 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.152 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.152  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782152 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.153 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.153  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782153 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.153 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.153  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782153 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.153 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.154  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782154 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.154 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2023-03-09 01:09:42.154  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782154 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2023-03-09 01:09:42.155 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into member (created_date, updated_date, created_by, last_modified_by, city, street, zipcode, name, member_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-03-09 01:09:42.155  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782155 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into member (created_date, updated_date, created_by, last_modified_by, city, street, zipcode, name, member_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+insert into member (created_date, updated_date, created_by, last_modified_by, city, street, zipcode, name, member_id) values ('2023-03-09T01:09:42.151+0900', '2023-03-09T01:09:42.151+0900', NULL, NULL, '진주', '2', '2222', 'userB', 8);
+2023-03-09 01:09:42.155 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values (?, ?, ?, ?, ?, 'Book', ?)
+2023-03-09 01:09:42.156  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782156 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values (?, ?, ?, ?, ?, 'Book', ?)
+insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values ('Spring1 BOOK', 20000, 200, NULL, NULL, 'Book', 9);
+2023-03-09 01:09:42.156 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values (?, ?, ?, ?, ?, 'Book', ?)
+2023-03-09 01:09:42.156  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782156 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values (?, ?, ?, ?, ?, 'Book', ?)
+insert into item (name, price, stock_quantity, author, isbn, dtype, item_id) values ('Spring2 BOOK', 40000, 400, NULL, NULL, 'Book', 10);
+2023-03-09 01:09:42.156 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into delivery (city, street, zipcode, delivery_status, delivery_id) values (?, ?, ?, ?, ?)
+2023-03-09 01:09:42.157  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782157 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into delivery (city, street, zipcode, delivery_status, delivery_id) values (?, ?, ?, ?, ?)
+insert into delivery (city, street, zipcode, delivery_status, delivery_id) values ('진주', '2', '2222', NULL, 12);
+2023-03-09 01:09:42.157 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into orders (delivery_id, member_id, order_date, status, order_id) values (?, ?, ?, ?, ?)
+2023-03-09 01:09:42.157  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782157 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into orders (delivery_id, member_id, order_date, status, order_id) values (?, ?, ?, ?, ?)
+insert into orders (delivery_id, member_id, order_date, status, order_id) values (12, 8, '2023-03-09T01:09:42.153+0900', 'ORDER', 11);
+2023-03-09 01:09:42.157 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (?, ?, ?, ?, ?)
+2023-03-09 01:09:42.158  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782158 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (?, ?, ?, ?, ?)
+insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (3, 9, 11, 20000, 13);
+2023-03-09 01:09:42.158 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (?, ?, ?, ?, ?)
+2023-03-09 01:09:42.158  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782158 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (?, ?, ?, ?, ?)
+insert into order_item (count, item_id, order_id, order_price, oder_item_id) values (4, 10, 11, 40000, 14);
+2023-03-09 01:09:42.158 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : update item set name=?, price=?, stock_quantity=?, author=?, isbn=? where item_id=?
+2023-03-09 01:09:42.159  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782159 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+update item set name=?, price=?, stock_quantity=?, author=?, isbn=? where item_id=?
+update item set name='Spring1 BOOK', price=20000, stock_quantity=197, author=NULL, isbn=NULL where item_id=9;
+2023-03-09 01:09:42.159 DEBUG 1904 --- [    Test worker] org.hibernate.SQL                        : update item set name=?, price=?, stock_quantity=?, author=?, isbn=? where item_id=?
+2023-03-09 01:09:42.160  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782160 | took 0ms | statement | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+update item set name=?, price=?, stock_quantity=?, author=?, isbn=? where item_id=?
+update item set name='Spring2 BOOK', price=40000, stock_quantity=396, author=NULL, isbn=NULL where item_id=10;
+2023-03-09 01:09:42.160  INFO 1904 --- [    Test worker] p6spy                                    : #1678291782160 | took 0ms | commit | connection 4| url jdbc:h2:tcp://localhost/~/jpapractice
+
+;
+2023-03-09 01:09:42.407  WARN 1904 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-09 01:09:42.954  INFO 1904 --- [    Test worker] j.j.JpapracticeApplicationTests          : Started JpapracticeApplicationTests in 2.408 seconds (JVM running for 2.885)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
