@@ -16,11 +16,12 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-
   profiles:
     group:
-      real=real,real-db:logging.level:
-                          org.hibernate.SQL: debug
+      real=real,real-db:
+
+logging.level:
+  org.hibernate.SQL: debug
 
 
 # org.hibernate.type: trace #??? ?? 2.x, hibernate5
