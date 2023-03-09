@@ -18,7 +18,8 @@ spring:
       matching-strategy: ant_path_matcher
 logging.level:
   org.hibernate.SQL: debug
-
+hibernate:
+  use-new-id-generator-mappings:
 
 # org.hibernate.type: trace #??? ?? 2.x, hibernate5
 # org.hibernate.orm.jdbc.bind: trace #??? ?? 3.x, hibernate6
