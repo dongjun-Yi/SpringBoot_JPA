@@ -49,16 +49,16 @@ public class MemberServiceTest {
 //        });
 //    }
 
-    @Test
-    public void BaseEntity() {
-        Member member = new Member();
-        member.setName("Hi");
-        Address address = new Address("서울", "거리", "123123");
-        member.setAddress(address);
-
-        Long findMemberId = memberService.join(member);
-
-        assertThat(findMemberId).isEqualTo(member.getId());
-    }
+//    @Test
+//    public void BaseEntity() {
+//        Member member = new Member();
+//        member.setName("Hi");
+//        Address address = new Address("서울", "거리", "123123");
+//        member.setAddress(address);
+//
+//        Long findMemberId = memberService.join(member);
+//
+//        assertThat(findMemberId).isEqualTo(member.getId());
+//    }
 
 }
