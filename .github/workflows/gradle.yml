@@ -53,4 +53,4 @@ jobs:
       run: |
         aws s3 cp \
         --region ap-northeast-2 \ 
-        ./jpatest.zip s3://jpatest/jpatest.zip
+        jpatest.zip s3://jpatest/jpatest.zip
