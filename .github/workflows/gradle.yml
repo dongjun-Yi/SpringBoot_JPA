@@ -39,13 +39,13 @@ jobs:
       run: pwd
       
     - name : ls -al check
-      run: ls- al
+      run: ls -al
 
    # S3 Bucket으로 copy
     - name : check pwd again
       run : pwd
     - name : ls -al check again
-      run: ls- al  
+      run: ls -al  
     - name: Deliver to AWS S3
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
