@@ -50,4 +50,5 @@ jobs:
       run: |
         aws s3 cp \
         --region ap-northeast-2 \
-        --acl private \ ./springboot-intro-build.zip s3://springboot-intro-build/
+        --acl private \ ./
+SpringBoot_JPA.zip s3://SpringBoot_JPA/
