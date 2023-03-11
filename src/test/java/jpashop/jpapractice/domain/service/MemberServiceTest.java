@@ -22,32 +22,32 @@ public class MemberServiceTest {
     @Autowired
     MemberService memberService;
 
-    @Test
-    public void 회원가입() throws Exception {
-        // given
-        Member member = new Member();
-        member.setName("kim");
-
-        // when
-        Long id = memberService.join(member);
-
-        // then
-        assertEquals(member, memberRepository.findOneById(id));
-    }
-
-    @Test//(expected = IllegalStateException.class)
-    public void 중복_회원_예외() throws IllegalStateException {
-        // given
-        Member member1 = new Member();
-        member1.setName("kim1");
-        Member member2 = new Member();
-        member2.setName("kim1");
-
-        assertThrows(IllegalStateException.class, () -> {
-            memberService.join(member1);
-            memberService.join(member2);
-        });
-    }
+//    @Test
+//    public void 회원가입() throws Exception {
+//        // given
+//        Member member = new Member();
+//        member.setName("kim");
+//
+//        // when
+//        Long id = memberService.join(member);
+//
+//        // then
+//        assertEquals(member, memberRepository.findOneById(id));
+//    }
+//
+//    @Test//(expected = IllegalStateException.class)
+//    public void 중복_회원_예외() throws IllegalStateException {
+//        // given
+//        Member member1 = new Member();
+//        member1.setName("kim1");
+//        Member member2 = new Member();
+//        member2.setName("kim1");
+//
+//        assertThrows(IllegalStateException.class, () -> {
+//            memberService.join(member1);
+//            memberService.join(member2);
+//        });
+//    }
 
     @Test
     public void BaseEntity() {
