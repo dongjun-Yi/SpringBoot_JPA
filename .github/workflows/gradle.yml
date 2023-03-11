@@ -51,4 +51,4 @@ jobs:
         aws s3 cp \
         --region ap-northeast-2 \
         --acl private \     
-./SpringBoot_JPA.zip s3://SpringBoot_JPA/
+    ./SpringBoot_JPA.zip s3://SpringBoot_JPA/
