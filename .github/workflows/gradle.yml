@@ -52,3 +52,12 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         aws s3 cp --region ap-northeast-2 ./jpatest.zip s3://jpatest/
+        
+    # Deploy
+    - name: Deploy
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        aws deploy create-deployment --application-name jpatest --deployment-group-name jpatest-deploy-group --file-exists-behavior OVERWRITE --s3-location bucket=jpatest,bundleType=zip,key=jpatest.zip --region ap-northeast-2
+
