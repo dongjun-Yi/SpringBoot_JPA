@@ -5,7 +5,7 @@ PROJECT_NAME=SpringBoot_JPA
 
 echo "> Build 파일복사"
 
-cp $REPOSITORY/zip/build/*.jar $REPOSITORY/
+cp $REPOSITORY/zip/build/libs/*.jar $REPOSITORY/
 
 echo "> 현재 구동중인 애플리케이션 pid 확인"
 
@@ -35,4 +35,4 @@ echo "> $JAR_NAME 실행"
 nohup java -jar \
 	-Dspring.config.location=classpath:/application.yml,/home/ec2-user/app/application-real-db.properties,classpath:application-real.properties \
   -Dspring.profiles.active=real \
-	$JAR_NAME > $REPOSITORY/$JAR_NAME 2>&1 &
+	$JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
