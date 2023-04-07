@@ -6,7 +6,6 @@ import jpashop.jpapractice.domain.service.MemberService;
 import jpashop.jpapractice.dto.member.create.MemberSignUpDto;
 import jpashop.jpapractice.web.MemberForm;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

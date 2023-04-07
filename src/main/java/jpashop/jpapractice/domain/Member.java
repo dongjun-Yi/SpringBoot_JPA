@@ -18,15 +18,12 @@ public class Member extends BaseEntity {
     @Column(name = "member_id")
     private Long id;
 
-    @NotEmpty
     private String loginId;
-    @NotEmpty
     private String name;
     @Embedded
     private Address address;
     @OneToMany(mappedBy = "member")
     @JsonIgnore
     private List<Order> orders = new ArrayList<>();
-    @NotEmpty
     public String password;
 }
