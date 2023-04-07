@@ -4,6 +4,9 @@ import jpashop.jpapractice.domain.Member;
 import jpashop.jpapractice.dto.BasicResponse;
 import jpashop.jpapractice.repository.MemberDataJpaRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,7 +16,7 @@ import java.util.stream.Collectors;
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor // final 붙은 필드만 가지고 생성자를 만들어줌ㄴ
-public class MemberService {
+public class MemberService{
 
     //private final MemberRepository memberRepository;
     private final MemberDataJpaRepository memberDataJpaRepository;
