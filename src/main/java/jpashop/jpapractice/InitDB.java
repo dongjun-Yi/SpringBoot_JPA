@@ -28,6 +28,7 @@ public class InitDB {
 
         public void init1() {
             Member member = createMember("userA", "서울", "1", "1111", "passwordA");
+            member.setLoginId("userA");
             em.persist(member);
             Book book1 = createBook("JPA1 BOOK", 10000, 100);
             Book book2 = createBook("JPA2 BOOK", 20000, 100);
@@ -44,6 +45,7 @@ public class InitDB {
 
         public void init2() {
             Member member = createMember("userB", "진주", "2", "2222", "passwordB");
+            member.setLoginId("userB");
             em.persist(member);
             Book book1 = createBook("Spring1 BOOK", 20000, 200);
             Book book2 = createBook("Spring2 BOOK", 40000, 400);
